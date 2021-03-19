@@ -37,16 +37,22 @@
 
     document.getElementById("reset").addEventListener("click", reset);
 
-    for (i=0; i<selectors.children.length; i++) {
-        selectors.children[i].addEventListener("select", function() {
-            narrative.children[i].textContent = '';
-            identify.children[i].textContent = '';
-            console.log(this.value);
-            console.log(this.text);
-            answerValue = this.value;
-            answerText = this.text;
-            narrative.children[i].append(answerValue);
-            identify.children[i].append(answerText);
+    document.querySelectorAll("select").addEventListener("change", function() {
+        for (i=0; i<selectors.children.length; i++) {
+            console.log(selectors.children[i]);
+        }
+    });
 
-        });
-    };
+//     for (i=0; i<selectors.children.length; i++) {
+//         selectors.children[i].addEventListener("select", function() {
+//             narrative.children[i].textContent = '';
+//             identify.children[i].textContent = '';
+//             console.log(this.value);
+//             console.log(this.text);
+//             answerValue = this.value;
+//             answerText = this.text;
+//             narrative.children[i].append(answerValue);
+//             identify.children[i].append(answerText);
+
+//         });
+//     };
