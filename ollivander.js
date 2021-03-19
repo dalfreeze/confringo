@@ -38,7 +38,7 @@
     document.getElementById("reset").addEventListener("click", reset);
 
     for (i=0; i<selectors.children.length; i++) {
-        selectors.children[i].addEventListener("change", function() {
+        selectors.children[i].addEventListener("select", function() {
             narrative.children[i].textContent = '';
             identify.children[i].textContent = '';
             console.log(this.value);
