@@ -37,7 +37,7 @@
 
     document.getElementById("reset").addEventListener("click", reset);
 
-    for (i=0; i<selectors.children; i++) {
+    for (i=0; i<selectors.children.length; i++) {
         selectors.children[i].addEventListener("change", function() {
             narrative.textContent = '';
             identify.textContent = '';
