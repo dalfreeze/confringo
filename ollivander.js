@@ -39,8 +39,8 @@
 
     for (i=0; i<selectors.children.length; i++) {
         selectors.children[i].addEventListener("change", function() {
-            narrative.textContent = '';
-            identify.textContent = '';
+            narrative.children[i].textContent = '';
+            identify.children[i].textContent = '';
             answerValue = this.value;
             answerText = this.text;
             narrative.children[i].append(answerValue);
