@@ -37,7 +37,7 @@
 
     document.getElementById("reset").addEventListener("click", reset);
 
-    document.querySelectorAll("select").addEventListener("change", function() {
+    document.getElementById("selectors").children.addEventListener("change", function() {
         for (i=0; i<selectors.children.length; i++) {
             console.log(selectors.children[i]);
         }
