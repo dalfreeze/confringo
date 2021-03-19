@@ -1,7 +1,3 @@
-     $(function(){
-      $("#wandMaker").load("https://dalfreeze.github.io/confringo/ollivander.html"); 
-    });
-
     let narrative = document.getElementById("narrative");
     identify = document.getElementById("identify");
     selectors = document.getElementById("selectors");
