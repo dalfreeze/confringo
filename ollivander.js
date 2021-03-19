@@ -37,50 +37,14 @@ document.getElementById("random").addEventListener("click", function() {
 
 document.getElementById("reset").addEventListener("click", reset);
 
-$('#selectWood').change(function(){
-  $("#wood").html('');
-  answer = $(this).val();
-  $("#wood").append(answer);
-});
+for (i=0; i<selectors.children; i++) {
+        selectors.children[i].addEventListener("change", function() {
+            narrative.textContent = '';
+            identify.textContent = '';
+            answerValue = this.value;
+            answerText = this.text;
+            narrative.children[i].append(answerValue);
+            identify.children[i].append(answerText);
 
-$('#selectCore').change(function(){
-  $("#core").html('');
-  answer = $(this).val();
-  $("#core").append(answer);
-});
-
-$('#selectLength').change(function(){
-  $("#length").html('');
-  answer = $(this).val();
-  $("#length").append(answer);
-});
-
-$('#selectFlex').change(function(){
-  $("#flex").html('');
-  answer = $(this).val();
-  $("#flex").append(answer);
-});
-
-$('#selectWood').change(function(){
-  $(".wood").html('');
-  answer = $('#selectWood option:selected').text();
-  $(".wood").append(answer + '. ');
-});
-
-$('#selectCore').change(function(){
-  $(".core").html('');
-  answer = $('#selectCore option:selected').text();
-  $(".core").append(answer);
-});
-
-$('#selectLength').change(function(){
-  $(".length").html('');
-  answer = $('#selectLength option:selected').text();
-  $(".length").append(answer);
-});
-
-$('#selectFlex').change(function(){
-  $(".flex").html('');
-  answer = $('#selectFlex option:selected').text();
-  $(".flex").append(answer);
-});
+        });
+    };
