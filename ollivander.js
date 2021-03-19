@@ -41,6 +41,8 @@
         selectors.children[i].addEventListener("change", function() {
             narrative.children[i].textContent = '';
             identify.children[i].textContent = '';
+            console.log(this.value);
+            console.log(this.text);
             answerValue = this.value;
             answerText = this.text;
             narrative.children[i].append(answerValue);
